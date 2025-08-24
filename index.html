@@ -1,194 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/x-icon" href="images/img.png">
-  <title>Star Mobile : Multi Brand Showroom</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/x-icon" href="images/img_fav.jpeg">
+    <title>Star Mobile : Multi Brand Showroom</title>
 
-  <!-- Font: Nunito -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- Font: Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
 
 
-  <!-- AOS Animation CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="css/aos.css"/>
+    <style>
+        :root {
+            --primary: #00A693;
+            --secondary: #f5f5f5;
+            --text: #111111;
+            --light: rgba(255, 255, 255, 0.68);
+        }
 
-  <style>
-    :root {
-      --primary: #00A693;
-      --secondary: #f5f5f5;
-      --text: #111111;
-      --light: rgba(255, 255, 255, 0.68);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body {
-      font-family: 'Nunito', sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--primary);
-      padding: 2rem 1rem;
-      text-align: center;
-      color: white;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.3rem;
-    }
-    nav {
-      background: var(--secondary);
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    nav a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 700;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #0f8a5f;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    ul li {
-      margin: 0.5rem 0;
-    }
-    a {
-      color: var(--primary);
-    }
-    .hero {
-      background: url('images/star_mobile_banner.jpg.jpg?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-      height: 280px;
-      position: relative;
-      border-bottom: 5px solid var(--primary);
-    }
-    .hero h2 {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: white;
-      font-size: 1.8rem;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-    }
-    .coming-soon {
-      text-align: center;
-      background: var(--secondary);
-      padding: 2rem;
-      border-radius: 10px;
-    }
-    .coming-soon a {
-      display: inline-block;
-      margin-top: 1rem;
-      background: var(--primary);
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      background: var(--primary);
-      color: white;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-    @media (max-width: 600px) {
-      .hero h2 { font-size: 1.2rem; left: 10px; bottom: 10px; }
-      nav { gap: 1rem; }
-    }
-  </style>
+        header {
+            background: var(--primary);
+            padding: 2rem 1rem;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        nav {
+            background: var(--secondary);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0f8a5f;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem 1rem;
+
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        .lottie-container {
+            width: 100%;
+            height: 280px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background: var(--secondary); /* fallback background */
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            position: relative;
+            z-index: 1;
+            color: white;
+            font-size: 1rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+
+        .coming-soon {
+            text-align: center;
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .coming-soon a {
+            display: inline-block;
+            margin-top: 1rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 1.2rem;
+                left: 10px;
+                bottom: 10px;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header data-aos="fade-down">
-  <h1>Star Mobile</h1>
-  <div class="subtitle">Multi Brand Showroom</div>
-  <p>Your Trusted Tech Destination</p>
+    <h1>Star Mobile</h1>
+    <div class="subtitle">Multi Brand Showroom</div>
+    <p>Your Trusted Tech Destination</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#services">Products</a>
-  <a href="#apps">Apps</a>
-  <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#services">Products</a>
+    <a href="#apps">Apps</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <div class="hero">
-  <h2 data-aos="fade-up">Now Launching Digital Experiences</h2>
+    <div id="lottie-phone" class="lottie-container" data-aos="fade-up"></div>
+    <h2 data-aos="fade-up">Now Launching Digital Experiences</h2>
 </div>
 
 <div style="background: #F0FFF8;">
-  <div class="container">
-    <div class="card" id="about" data-aos="fade-up">
-      <h2>About Us</h2>
-      <p>Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app development. We’re also entering the electronics market, providing a range of products like ACs, refrigerators, TVs, and household essentials. We're focused on quality, trust, and modern solutions to empower your digital and daily lifestyle.</p>
-    </div>
+    <div class="container">
+        <div class="card" id="about" data-aos="fade-up">
+            <h2>About Us</h2>
+            <p>Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app
+                development. We’re also entering the electronics market, providing a range of products like ACs,
+                refrigerators, TVs, and household essentials. We're focused on quality, trust, and modern solutions to
+                empower your digital and daily lifestyle.</p>
+        </div>
 
-    <div class="card" id="services" data-aos="fade-up">
-      <h2>What We Offer</h2>
-      <ul>
-        <li>🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo, and more</li>
-        <li>🔸 Mobile accessories – Earbuds, chargers, covers, screen guards</li>
-        <li>🔸 Household electronics – ACs, refrigerators, LED TVs, washing machines</li>
-        <li>🔸 Phone repair, OS upgrade, and battery replacements</li>
-        <li>🔸 EMI options & exchange offers available</li>
-        <li>🔸 Bulk/corporate device & appliance procurement</li>
-      </ul>
-    </div>
+        <div class="card" id="services" data-aos="fade-up">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo, and more</li>
+                <li>🔸 Mobile accessories – Earbuds, chargers, covers, screen guards</li>
+                <li>🔸 Household electronics – ACs, refrigerators, LED TVs, washing machines</li>
+                <li>🔸 Phone repair, OS upgrade, and battery replacements</li>
+                <li>🔸 EMI options & exchange offers available</li>
+                <li>🔸 Bulk/corporate device & appliance procurement</li>
+            </ul>
+        </div>
 
 
-    <div class="card coming-soon" id="apps" data-aos="fade-up">
-      <h2>📱 Our Apps Are Coming Soon!</h2>
-      <p>We’re building innovative mobile apps to make your Star Mobile experience smarter and seamless. Stay tuned for launch updates.</p>
-      <a href="#">Notify Me</a>
-    </div>
+        <div class="card coming-soon" id="apps" data-aos="fade-up">
+            <h2>📱 Our Apps Are Coming Soon!</h2>
+            <p>We’re building innovative mobile apps to make your Star Mobile experience smarter and seamless. Stay
+                tuned for launch updates.</p>
+            <a href="#">Notify Me</a>
+        </div>
 
-    <div class="card" id="contact" data-aos="fade-up">
-      <h2>Contact Us</h2>
-      <p><strong>Owner:</strong> Mazhar Qureshi</p>
-      <p><strong>Address:</strong> SY N 51/2, Ramdaswadi, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201</p>
-      <p><strong>Email:</strong> <a href="mailto:support@starmobilebsl.com">support@starmobilebsl.com</a></p>
-      <p><strong>Phone:</strong> +91-9876543210</p>
-      <p><strong>Instagram:</strong> <a href="#">@starmobile_bhusawal</a></p>
-      <p><strong>Hours:</strong> Mon–Sat, 10:00 AM – 8:30 PM</p>
+        <div class="card" id="contact" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p><strong>Owner:</strong> Mazhar Qureshi</p>
+            <p><strong>Address:</strong> SY N 51/2, Ramdaswadi, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201</p>
+            <p><strong>Email:</strong> <a href="mailto:support@starmobilebsl.com">support@starmobilebsl.com</a></p>
+            <p><strong>Phone:</strong> +91-9876543210</p>
+            <p><strong>Instagram:</strong> <a href="#">@starmobile_bhusawal</a></p>
+            <p><strong>Hours:</strong> Mon–Sat, 10:00 AM – 8:30 PM</p>
+        </div>
     </div>
-  </div>
 </div>
 
 
 <footer>
-  <p>© 2025 Star Mobile : Multi Brand Showroom | All Rights Reserved</p>
+    <p>© 2025 Star Mobile : Multi Brand Showroom | All Rights Reserved</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="css/aos.js"></script>
+<script src="css/lottee.min.js"></script>
 <script>AOS.init();</script>
+<script>
+    lottie.loadAnimation({
+        container: document.getElementById('lottie-phone'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'animations/phone.json'
+    });
+</script>
 </body>
 </html>
