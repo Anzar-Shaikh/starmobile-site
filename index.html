@@ -172,70 +172,61 @@
 <body>
 
 <header data-aos="fade-down">
-    <h1>Star Mobile</h1>
-    <div class="subtitle">Multi Brand Showroom</div>
-    <p>Your Trusted Tech Destination</p>
+
+    <h1 id="title-main">Star Mobile</h1>
+    <div class="subtitle" id="subtitle-main">Multi Brand Showroom</div>
+    <p id="tagline-main">Your Trusted Tech Destination</p>
+    <button id="lang-toggle" style="float: right;margin-top:1rem; padding:0.5rem 1rem; border-radius:5px; border:none; background:#00A693; color:white; font-weight:bold; cursor:pointer;">हिंदी</button>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Products</a>
-    <a href="#apps">Apps</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" id="nav-about">About</a>
+    <a href="#services" id="nav-services">Products</a>
+    <a href="#apps" id="nav-apps">Apps</a>
+    <a href="#contact" id="nav-contact">Contact</a>
 </nav>
 
 <div class="hero">
     <div id="lottie-phone" class="lottie-container" data-aos="fade-up"></div>
-    <h2 data-aos="fade-up">Now Launching Digital Experiences</h2>
+    <h2 data-aos="fade-up" id="hero-title">Now Launching Digital Experiences</h2>
 </div>
 
 <div style="background: #F0FFF8;">
     <div class="container">
         <div class="card" id="about" data-aos="fade-up">
-            <h2>About Us</h2>
-            <p>Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app
-                development. We’re also entering the electronics market, providing a range of products like ACs,
-                refrigerators, TVs, and household essentials. We're focused on quality, trust, and modern solutions to
-                empower your digital and daily lifestyle.</p>
+            <h2 id="about-title">About Us</h2>
+            <p id="about-desc">Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app development. We’re also entering the electronics market, providing a range of products like ACs, refrigerators, TVs, and home essentials. We focus on quality, trust, and modern solutions to empower your digital and daily lifestyle.</p>
         </div>
-
         <div class="card" id="services" data-aos="fade-up">
-            <h2>What We Offer</h2>
-            <ul>
-                <li>🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo, and more</li>
+            <h2 id="services-title">What We Offer</h2>
+            <ul id="services-list">
+                <li>🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo & more</li>
                 <li>🔸 Mobile accessories – Earbuds, chargers, covers, screen guards</li>
-                <li>🔸 Household electronics – ACs, refrigerators, LED TVs, washing machines</li>
-                <li>🔸 Phone repair, OS upgrade, and battery replacements</li>
+                <li>🔸 Home electronics – ACs, refrigerators, LED TVs, washing machines</li>
+                <li>🔸 Phone repair, OS upgrade, and battery replacement</li>
                 <li>🔸 EMI options & exchange offers available</li>
-                <li>🔸 Bulk/corporate device & appliance procurement</li>
+                <li>🔸 Bulk/corporate device & equipment purchase</li>
             </ul>
         </div>
-
-
         <div class="card coming-soon" id="apps" data-aos="fade-up">
-            <h2>📱 Our Apps Are Coming Soon!</h2>
-            <p>We’re building innovative mobile apps to make your Star Mobile experience smarter and seamless. Stay
-                tuned for launch updates.</p>
-            <a href="#">Notify Me</a>
+            <h2 id="apps-title">📱 Our Apps Coming Soon!</h2>
+            <p id="apps-desc">We’re building innovative mobile apps to make your Star Mobile experience smarter and seamless. Stay tuned for launch updates.</p>
+            <a href="#" id="apps-btn">Notify Me</a>
         </div>
-
         <div class="card" id="contact" data-aos="fade-up">
-            <h2>Contact Us</h2>
-            <p><strong>Owner:</strong> Mazhar Qureshi</p>
-            <p><strong>Address:</strong> SY N 51/2, Ramdaswadi, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201</p>
-            <p><strong>Email:</strong> <a href="mailto:support@starmobilebsl.com">support@starmobilebsl.com</a></p>
-            <p><strong>Phone:</strong> +91-9876543210</p>
-            <p><strong>Instagram:</strong> <a href="#">@starmobile_bhusawal</a></p>
-            <p><strong>Hours:</strong> Mon–Sat, 10:00 AM – 8:30 PM</p>
+            <h2 id="contact-title">Contact</h2>
+            <p><strong id="owner-label">Owner:</strong> <span id="owner-name">Mazhar Quraishi</span></p>
+            <p><strong id="address-label">Address:</strong> <span id="address-main">SY No 51/2, Ramdaswadi, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201</span></p>
+            <p><strong id="email-label">Email:</strong> <a href="mailto:support@starmobilebsl.com" id="email-main">support@starmobilebsl.com</a></p>
+            <p><strong id="phone-label">Phone:</strong> <span id="phone-main">+91-9876543210</span></p>
+            <p><strong id="insta-label">Instagram:</strong> <a href="#" id="insta-main">@starmobile_bhusawal</a></p>
+            <p><strong id="timing-label">Timing:</strong> <span id="timing-main">Mon–Sat, 10:00 AM – 8:30 PM</span></p>
         </div>
     </div>
 </div>
-
-
 <footer>
-    <p>© 2025 Star Mobile : Multi Brand Showroom | All Rights Reserved</p>
+    <p id="footer-main">© 2025 Star Mobile : Multi Brand Showroom | All rights reserved</p>
 </footer>
-
 <script src="css/aos.js"></script>
 <script src="css/lottee.min.js"></script>
 <script>AOS.init();</script>
@@ -246,6 +237,140 @@
         loop: true,
         autoplay: true,
         path: 'animations/phone.json'
+    });
+
+    // Language translations
+    const translations = {
+        en: {
+            titleMain: "Star Mobile",
+            subtitleMain: "Multi Brand Showroom",
+            taglineMain: "Your Trusted Tech Destination",
+            navAbout: "About",
+            navServices: "Products",
+            navApps: "Apps",
+            navContact: "Contact",
+            heroTitle: "Now Launching Digital Experiences",
+            aboutTitle: "About Us",
+            aboutDesc: "Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app development. We’re also entering the electronics market, providing a range of products like ACs, refrigerators, TVs, and home essentials. We focus on quality, trust, and modern solutions to empower your digital and daily lifestyle.",
+            servicesTitle: "What We Offer",
+            servicesList: [
+                "🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo & more",
+                "🔸 Mobile accessories – Earbuds, chargers, covers, screen guards",
+                "🔸 Home electronics – ACs, refrigerators, LED TVs, washing machines",
+                "🔸 Phone repair, OS upgrade, and battery replacement",
+                "🔸 EMI options & exchange offers available",
+                "🔸 Bulk/corporate device & equipment purchase"
+            ],
+            appsTitle: "📱 Our Apps Coming Soon!",
+            appsDesc: "We’re building innovative mobile apps to make your Star Mobile experience smarter and seamless. Stay tuned for launch updates.",
+            appsBtn: "Notify Me",
+            contactTitle: "Contact",
+            ownerLabel: "Owner:",
+            ownerName: "Mazhar Quraishi",
+            addressLabel: "Address:",
+            addressMain: "SY No 51/2, Ramdaswadi, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201",
+            emailLabel: "Email:",
+            emailMain: "support@starmobilebsl.com",
+            phoneLabel: "Phone:",
+            phoneMain: "+91-9876543210",
+            instaLabel: "Instagram:",
+            instaMain: "@starmobile_bhusawal",
+            timingLabel: "Timing:",
+            timingMain: "Mon–Sat, 10:00 AM – 8:30 PM",
+            footerMain: "© 2025 Star Mobile : Multi Brand Showroom | All rights reserved",
+            langToggle: "हिंदी"
+        },
+        hi: {
+            titleMain: "स्टार मोबाइल",
+            subtitleMain: "मल्टी ब्रांड शोरूम",
+            taglineMain: "आपका विश्वसनीय टेक डेस्टिनेशन",
+            navAbout: "परिचय",
+            navServices: "उत्पाद",
+            navApps: "ऐप्स",
+            navContact: "संपर्क करें",
+            heroTitle: "अब लॉन्च हो रहे हैं डिजिटल अनुभव",
+            aboutTitle: "हमारे बारे में",
+            aboutDesc: "स्टार मोबाइल एक अग्रणी शोरूम है, जो स्मार्टफोन, एक्सेसरीज़ और अब मोबाइल ऐप डेवलपमेंट में विस्तार कर रहा है। हम इलेक्ट्रॉनिक्स मार्केट में भी प्रवेश कर रहे हैं, जिसमें एसी, रेफ्रिजरेटर, टीवी और घरेलू आवश्यकताएँ शामिल हैं। हम गुणवत्ता, विश्वास और आधुनिक समाधान पर केंद्रित हैं ताकि आपकी डिजिटल और दैनिक जीवनशैली को सशक्त बनाया जा सके।",
+            servicesTitle: "हम क्या प्रदान करते हैं",
+            servicesList: [
+                "🔸 मल्टी-ब्रांड स्मार्टफोन – सैमसंग, एप्पल, ओप्पो, वीवो और अन्य",
+                "🔸 मोबाइल एक्सेसरीज़ – ईयरबड्स, चार्जर, कवर, स्क्रीन गार्ड",
+                "🔸 घरेलू इलेक्ट्रॉनिक्स – एसी, रेफ्रिजरेटर, एलईडी टीवी, वॉशिंग मशीन",
+                "🔸 फोन रिपेयर, ओएस अपग्रेड, और बैटरी बदलना",
+                "🔸 ईएमआई विकल्प और एक्सचेंज ऑफर उपलब्ध",
+                "🔸 बल्क/कॉर्पोरेट डिवाइस और उपकरण खरीद"
+            ],
+            appsTitle: "📱 हमारे ऐप्स जल्द आ रहे हैं!",
+            appsDesc: "हम आपके स्टार मोबाइल अनुभव को स्मार्ट और सहज बनाने के लिए इनोवेटिव मोबाइल ऐप्स बना रहे हैं। लॉन्च अपडेट के लिए जुड़े रहें।",
+            appsBtn: "मुझे सूचित करें",
+            contactTitle: "संपर्क करें",
+            ownerLabel: "मालिक:",
+            ownerName: "मज़हर कुरैशी",
+            addressLabel: "पता:",
+            addressMain: "एसवाई एन 51/2, रामदासवाड़ी, खड़का रोड, भुसावल, जलगांव, महाराष्ट्र, 425201",
+            emailLabel: "ईमेल:",
+            emailMain: "support@starmobilebsl.com",
+            phoneLabel: "फोन:",
+            phoneMain: "+91-9876543210",
+            instaLabel: "इंस्टाग्राम:",
+            instaMain: "@starmobile_bhusawal",
+            timingLabel: "समय:",
+            timingMain: "सोमवार–शनिवार, सुबह 10:00 बजे – रात 8:30 बजे",
+            footerMain: "© 2025 स्टार मोबाइल : मल्टी ब्रांड शोरूम | सर्वाधिकार सुरक्षित",
+            langToggle: "English"
+        }
+    };
+
+    function setLanguage(lang) {
+        const t = translations[lang];
+        document.getElementById('title-main').textContent = t.titleMain;
+        document.getElementById('subtitle-main').textContent = t.subtitleMain;
+        document.getElementById('tagline-main').textContent = t.taglineMain;
+        document.getElementById('nav-about').textContent = t.navAbout;
+        document.getElementById('nav-services').textContent = t.navServices;
+        document.getElementById('nav-apps').textContent = t.navApps;
+        document.getElementById('nav-contact').textContent = t.navContact;
+        document.getElementById('hero-title').textContent = t.heroTitle;
+        document.getElementById('about-title').textContent = t.aboutTitle;
+        document.getElementById('about-desc').textContent = t.aboutDesc;
+        document.getElementById('services-title').textContent = t.servicesTitle;
+        const ul = document.getElementById('services-list');
+        ul.innerHTML = '';
+        t.servicesList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ul.appendChild(li);
+        });
+        document.getElementById('apps-title').textContent = t.appsTitle;
+        document.getElementById('apps-desc').textContent = t.appsDesc;
+        document.getElementById('apps-btn').textContent = t.appsBtn;
+        document.getElementById('contact-title').textContent = t.contactTitle;
+        document.getElementById('owner-label').textContent = t.ownerLabel;
+        document.getElementById('owner-name').textContent = t.ownerName;
+        document.getElementById('address-label').textContent = t.addressLabel;
+        document.getElementById('address-main').textContent = t.addressMain;
+        document.getElementById('email-label').textContent = t.emailLabel;
+        document.getElementById('email-main').textContent = t.emailMain;
+        document.getElementById('phone-label').textContent = t.phoneLabel;
+        document.getElementById('phone-main').textContent = t.phoneMain;
+        document.getElementById('insta-label').textContent = t.instaLabel;
+        document.getElementById('insta-main').textContent = t.instaMain;
+        document.getElementById('timing-label').textContent = t.timingLabel;
+        document.getElementById('timing-main').textContent = t.timingMain;
+        document.getElementById('footer-main').textContent = t.footerMain;
+        document.getElementById('lang-toggle').textContent = t.langToggle;
+        localStorage.setItem('lang', lang);
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+        const currentLang = localStorage.getItem('lang') || 'en';
+        setLanguage(currentLang === 'en' ? 'hi' : 'en');
+    });
+
+    // On page load, set language from localStorage or default to English
+    window.addEventListener('DOMContentLoaded', function () {
+        const lang = localStorage.getItem('lang') || 'en';
+        setLanguage(lang);
     });
 </script>
 </body>
