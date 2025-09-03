@@ -184,6 +184,8 @@
     <a href="#services" id="nav-services">Products</a>
     <a href="#apps" id="nav-apps">Apps</a>
     <a href="#contact" id="nav-contact">Contact</a>
+    <a href="#privacy" id="nav-privacy">Privacy</a>
+    <a href="#terms" id="nav-terms">Terms</a>
 </nav>
 
 <div class="hero">
@@ -222,6 +224,15 @@
             <p><strong id="insta-label">Instagram:</strong> <a href="https://www.instagram.com/star_mobile_bsl/#" id="insta-main">@star_mobile_bsl</a></p>
             <p><strong id="timing-label">Timing:</strong> <span id="timing-main">Mon–Sat, 10:00 AM – 8:30 PM</span></p>
         </div>
+        <div class="card" id="privacy" data-aos="fade-up">
+            <h2 id="privacy-title">Privacy Policy</h2>
+            <p id="privacy-desc">Our privacy policy content goes here...</p>
+        </div>
+
+        <div class="card" id="terms" data-aos="fade-up">
+            <h2 id="terms-title">Terms & Conditions</h2>
+            <p id="terms-desc">Our terms and conditions content goes here...</p>
+        </div>
     </div>
 </div>
 <footer>
@@ -249,6 +260,12 @@
             navServices: "Products",
             navApps: "Apps",
             navContact: "Contact",
+            navPrivacy: "Privacy",
+            navTerms: "Terms",
+            privacyTitle: "Privacy Policy",
+            privacyDesc: "At Star Mobile, we respect your privacy. We only collect essential information to provide better services and never share your data with third parties without your consent.",
+            termsTitle: "Terms & Conditions",
+            termsDesc: "By using our services, you agree to follow our policies. Product availability, pricing, and offers are subject to change. Please contact us for clarification.",
             heroTitle: "Now Launching Digital Experiences",
             aboutTitle: "About Us",
             aboutDesc: "Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app development. We’re also entering the electronics market, providing a range of products like ACs, refrigerators, TVs, and home essentials. We focus on quality, trust, and modern solutions to empower your digital and daily lifestyle.",
@@ -317,7 +334,14 @@
             timingLabel: "समय:",
             timingMain: "हर दिन, सुबह 10:00 बजे – रात 10:00 बजे",
             footerMain: "© 2025 स्टार मोबाइल : मल्टी ब्रांड शोरूम | सर्वाधिकार सुरक्षित",
-            langToggle: "English"
+            langToggle: "English",
+            navPrivacy: "गोपनीयता",
+            navTerms: "नियम",
+            privacyTitle: "गोपनीयता नीति",
+            privacyDesc: "स्टार मोबाइल में, हम आपकी गोपनीयता का सम्मान करते हैं। हम केवल आवश्यक जानकारी एकत्र करते हैं ताकि बेहतर सेवाएँ प्रदान की जा सकें और आपकी अनुमति के बिना आपका डेटा किसी तीसरे पक्ष के साथ साझा नहीं किया जाता।",
+            termsTitle: "नियम और शर्तें",
+            termsDesc: "हमारी सेवाओं का उपयोग करके, आप हमारी नीतियों का पालन करने के लिए सहमत होते हैं। उत्पाद की उपलब्धता, मूल्य और ऑफ़र बदल सकते हैं। कृपया अधिक जानकारी के लिए हमसे संपर्क करें।"
+
         }
     };
 
@@ -360,6 +384,12 @@
         document.getElementById('footer-main').textContent = t.footerMain;
         document.getElementById('lang-toggle').textContent = t.langToggle;
         localStorage.setItem('lang', lang);
+        document.getElementById('nav-privacy').textContent = t.navPrivacy;
+        document.getElementById('nav-terms').textContent = t.navTerms;
+        document.getElementById('privacy-title').textContent = t.privacyTitle;
+        document.getElementById('privacy-desc').textContent = t.privacyDesc;
+        document.getElementById('terms-title').textContent = t.termsTitle;
+        document.getElementById('terms-desc').textContent = t.termsDesc;
     }
 
     document.getElementById('lang-toggle').addEventListener('click', function () {
