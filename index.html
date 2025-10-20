@@ -1,411 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" type="image/x-icon" href="images/img_fav.jpeg">
-    <title>Star Mobile : Multi Brand Showroom</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tripzey — Pool rides & private hire for passenger and cargo</title>
+    <meta name="description" content="Tripzey lets you pool rides or offer private rides across all vehicle types — from passenger cars and bikes to cargo vans and trucks. Safe, fast, and flexible travel." />
+    <link rel="canonical" href="https://tripzey.starmobilebsl.in/" />
+    <link rel="icon" type="image/png" href="images/tripzey-favicon.png" />
+    <meta property="og:title" content="Tripzey — Pool rides & private hire" />
+    <meta property="og:description" content="All‑type vehicle pooling and private rides for passenger and cargo." />
+    <meta property="og:url" content="https://tripzey.starmobilebsl.in/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Font: Nunito -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-          rel="stylesheet">
-
-
-    <!-- AOS Animation CSS -->
-    <link rel="stylesheet" href="css/aos.css"/>
     <style>
         :root {
-            --primary: #00A693;
-            --secondary: #f5f5f5;
-            --text: #111111;
-            --light: rgba(255, 255, 255, 0.68);
+            --bg: #0b1020;
+            --card: #121836;
+            --brand: #5b8cff;
+            --brand-2: #6ef3ff;
+            --text: #eef3ff;
+            --muted: #b9c3dd;
+            --ok: #28c76f;
+            --warn: #ffb020;
+            --danger: #ff5c5c;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
+        * { box-sizing: border-box; }
+        html, body { height: 100%; scroll-behavior: smooth; }
         body {
-            font-family: 'Nunito', sans-serif;
-            background: rgba(255, 255, 255, 0.68);
-            color: #111111;
-            line-height: 1.6;
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 800px at 20% -10%, #1a2250 0%, transparent 60%),
+            radial-gradient(1000px 600px at 90% 10%, #0f1b3a 0%, transparent 60%),
+            var(--bg);
         }
+        a { color: inherit; text-decoration: none; }
+        .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 
+        /* Header */
         header {
-            background: #00A693;
-            padding: 2rem 1rem;
-            text-align: center;
-            color: white;
+            position: sticky; top: 0; z-index: 20;
+            background: rgba(11,16,32,0.7); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .nav {
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .brand {
+            display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.2px;
+        }
+        .brand-badge {
+            width: 32px; height: 32px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+            display: grid; place-items: center; color: #0b1020; font-weight: 900;
+        }
+        nav ul { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }
+        nav a { color: var(--muted); font-weight: 600; }
+        nav a:hover { color: var(--text); }
+
+        /* Hero */
+        .hero { padding: 72px 0 32px; }
+        .hero-inner {
+            display: grid; gap: 28px; align-items: center;
+            grid-template-columns: 1.1fr 0.9fr;
+        }
+        .title { font-size: clamp(32px, 4vw, 52px); line-height: 1.05; margin: 0 0 10px; }
+        .subtitle { color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin: 0 0 22px; }
+        .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0 26px; }
+        .btn {
+            padding: 12px 18px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);
+            background: #192140; color: var(--text); font-weight: 700;
+        }
+        .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; border: none; }
+        .btn.ghost { background: transparent; }
+        .stores { display: flex; gap: 12px; flex-wrap: wrap; }
+        .store-btn {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 12px 16px; border-radius: 12px; background: #0e1430;
+            border: 1px solid rgba(255,255,255,0.08); color: var(--text); font-weight: 700;
+        }
+        .store-btn small { display: block; color: var(--muted); font-weight: 600; line-height: 1; }
+        .mock {
+            width: 100%; aspect-ratio: 3/4; border-radius: 24px; border: 1px solid rgba(255,255,255,0.06);
+            background:
+                    radial-gradient(200px 120px at 80% 0%, rgba(110,243,255,0.25), transparent 60%),
+                    radial-gradient(220px 140px at 20% 100%, rgba(91,140,255,0.25), transparent 60%),
+                    linear-gradient(180deg, #0d1533 0%, #0a112b 100%);
+            display: grid; place-items: center; color: var(--muted);
         }
 
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.3rem;
+        /* Sections */
+        section { padding: 60px 0; }
+        .section-title { font-size: 28px; margin: 0 0 12px; }
+        .section-sub { color: var(--muted); margin: 0 0 26px; }
+        .grid-3 {
+            display: grid; gap: 16px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
-
-        nav {
-            background: #f5f5f5;
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        nav a {
-            color: #00A693;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #0f8a5f;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem 1rem;
-
-        }
-
         .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+            background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px;
+            padding: 18px;
+        }
+        .card h3 { margin: 0 0 8px; font-size: 18px; }
+        .card p { margin: 0; color: var(--muted); }
+        .icon { font-size: 22px; }
+
+        .steps {
+            display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        .step { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 16px; }
+        .step .num {
+            display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px;
+            background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; font-weight: 800;
+            margin-bottom: 10px;
         }
 
-        h2 {
-            color: #00A693;
-            margin-bottom: 1rem;
-        }
+        details.faq { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 14px 16px; }
+        details.faq + details.faq { margin-top: 10px; }
+        details.faq summary { cursor: pointer; font-weight: 700; }
+        details.faq p { color: var(--muted); }
 
-        ul li {
-            margin: 0.5rem 0;
-        }
+        /* Footer */
+        footer { padding: 28px 0 50px; color: var(--muted); }
+        .foot { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+        .foot a { color: var(--muted); }
+        .policy { display: flex; gap: 14px; flex-wrap: wrap; }
 
-        a {
-            color: #00A693;
-        }
-
-        .lottie-container {
-            width: 100%;
-            height: 280px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero {
-            position: relative;
-            height: 280px;
-            overflow: hidden;
-            background: #f5f5f5; /* fallback background */
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
-            padding: 20px;
-        }
-
-        .hero h2 {
-            position: relative;
-            z-index: 1;
-            color: white;
-            font-size: 1rem;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-        }
-
-
-        .coming-soon {
-            text-align: center;
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .coming-soon a {
-            display: inline-block;
-            margin-top: 1rem;
-            background: #00A693;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            background: #00A693;
-            color: white;
-            padding: 1rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 600px) {
-            .hero h2 {
-                font-size: 1.2rem;
-                left: 10px;
-                bottom: 10px;
-            }
-
-            nav {
-                gap: 1rem;
-            }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .steps { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-
-<header data-aos="fade-down">
-
-    <h1 id="title-main">Star Mobile</h1>
-    <div class="subtitle" id="subtitle-main">Multi Brand Showroom</div>
-    <p id="tagline-main">Your Trusted Tech Destination</p>
-    <button id="lang-toggle" style="float: right;margin-top:1rem; padding:10px 10px; border-radius:5px; border:none; background:#00A693; color:white; font-weight:bold; cursor:pointer;">हिंदी</button>
+<header>
+    <div class="container nav">
+        <div class="brand">
+            <div class="brand-badge">T</div>
+            <span>Tripzey</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how">How it works</a></li>
+                <li><a href="#safety">Safety</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <a href="#about" id="nav-about">About</a>
-    <a href="#services" id="nav-services">Products</a>
-    <a href="#apps" id="nav-apps">Apps</a>
-    <a href="#contact" id="nav-contact">Contact</a>
-    <a href="#privacy" id="nav-privacy">Privacy</a>
-    <a href="#terms" id="nav-terms">Terms</a>
-</nav>
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div>
+                <h1 class="title">Pool rides or hire privately — passenger and cargo, in one app</h1>
+                <p class="subtitle">Tripzey digitizes everyday movement. Share a ride, offer seats, or book a private vehicle — from bikes and cars to vans and trucks. Real‑time matching, transparent fares, and safety at the core.</p>
+                <div class="cta">
+                    <a class="btn primary" href="#features">See what’s inside</a>
+                    <a class="btn ghost" href="#how">How it works</a>
+                </div>
+                <div class="stores">
+                    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.tripzey" rel="noopener">
+                        <span>Google Play<br/><small>Get it on</small></span>
+                    </a>
+                    <a class="store-btn" href="https://apps.apple.com/app/id000000000" rel="noopener">
+                        <span>App Store<br/><small>Download on the</small></span>
+                    </a>
+                </div>
+            </div>
+<!--            <div class="mock" aria-label="Tripzey app preview">-->
+<!--                <div>-->
+<!--                    <div style="text-align:center; font-weight:700; margin-bottom:8px;">Live trip map • Requests • Offers</div>-->
+<!--                    <div style="font-size:14px; color:var(&#45;&#45;muted); text-align:center;">Screenshots coming soon</div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </section>
 
-<div class="hero">
-    <div id="lottie-phone" class="lottie-container" data-aos="fade-up"></div>
-    <h2 data-aos="fade-up" id="hero-title">Now Launching Digital Experiences</h2>
-</div>
+    <!-- Features -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">What you can do</h2>
+            <p class="section-sub">All‑type vehicle pooling and private rides for people and goods.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon">🚗</div>
+                    <h3>Pool passenger rides</h3>
+                    <p>Request a seat or offer your spare seats for daily commutes and inter‑city trips.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🛻</div>
+                    <h3>Hire cargo vehicles</h3>
+                    <p>Post a cargo job and match with nearby vans, pickups, or trucks in minutes.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔒</div>
+                    <h3>Private full‑vehicle hire</h3>
+                    <p>Book the entire vehicle for yourself or your business with upfront pricing.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📍</div>
+                    <h3>Real‑time matching</h3>
+                    <p>See nearby drivers and riders, and dynamic availability.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💬</div>
+                    <h3>Seamless communication</h3>
+                    <p>Coordinate safely with your passengers or drivers.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💳</div>
+                    <h3>Cash or digital</h3>
+                    <p>Pay the way you like — cash, UPI, or cards where supported.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div style="background: #F0FFF8;">
-    <div class="container">
-        <div class="card" id="about" data-aos="fade-up">
-            <h2 id="about-title">About Us</h2>
-            <p id="about-desc">Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app development. We’re also entering the electronics market, providing a range of products like ACs, refrigerators, TVs, and home essentials. We focus on quality, trust, and modern solutions to empower your digital and daily lifestyle.</p>
+    <!-- How it works -->
+    <section id="how">
+        <div class="container">
+            <h2 class="section-title">How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="num">1</div>
+                    <h3>Set your trip</h3>
+                    <p>Enter pickup, drop, seats or cargo type, and timing.</p>
+                </div>
+                <div class="step">
+                    <div class="num">2</div>
+                    <h3>Choose mode</h3>
+                    <p>Pool with others, offer seats, or hire a full vehicle.</p>
+                </div>
+                <div class="step">
+                    <div class="num">3</div>
+                    <h3>Match & chat</h3>
+                    <p>Get real‑time matches, chat on whatsapp, confirm fares.</p>
+                </div>
+                <div class="step">
+                    <div class="num">4</div>
+                    <h3>Ride safely</h3>
+                    <p>Track live, share trip, rate and review afterwards.</p>
+                </div>
+            </div>
         </div>
-        <div class="card" id="services" data-aos="fade-up">
-            <h2 id="services-title">What We Offer</h2>
-            <ul id="services-list">
-                <li>🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo & more</li>
-                <li>🔸 Mobile accessories – Earbuds, chargers, covers, screen guards</li>
-                <li>🔸 Home electronics – ACs, refrigerators, LED TVs, washing machines</li>
-                <li>🔸 Phone repair, OS upgrade, and battery replacement</li>
-                <li>🔸 EMI options & exchange offers available</li>
-                <li>🔸 Bulk/corporate device & equipment purchase</li>
-            </ul>
-        </div>
-        <div class="card coming-soon" id="apps" data-aos="fade-up">
-            <h2 id="apps-title">🚗 Tripzey — Carpooling & Ride Sharing</h2>
-            <p id="apps-desc">Tripzey digitizes India's everyday ride culture: request a ride if you don't have a vehicle, offer rides with spare seats, or list your car for full hire. Negotiate fares in-app, match with nearby drivers or riders in real time, and travel safely with ratings, KYC, and Other support.</p>
-<!--            <a href="#" id="apps-btn">Learn More</a>-->
-        </div>
-        <div class="card" id="contact" data-aos="fade-up">
-            <h2 id="contact-title">Contact</h2>
-            <p><strong id="owner-label">Owner:</strong> <span id="owner-name">Mazhar Quraishi</span></p>
-            <p><strong id="address-label">Address:</strong> <span id="address-main">Raza Tower, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201</span></p>
-            <p><strong id="email-label">Email:</strong> <a href="mailto:support@starmobilebsl.com" id="email-main">support@starmobilebsl.com</a></p>
-            <p><strong id="phone-label">Phone:</strong> <span id="phone-main">+91-9876543210</span></p>
-            <p><strong id="insta-label">Instagram:</strong> <a href="https://www.instagram.com/star_mobile_bsl/#" id="insta-main">@star_mobile_bsl</a></p>
-            <p><strong id="timing-label">Timing:</strong> <span id="timing-main">Mon–Sat, 10:00 AM – 8:30 PM</span></p>
-        </div>
-        <div class="card" id="privacy" data-aos="fade-up">
-            <h2 id="privacy-title">Privacy Policy</h2>
-            <p id="privacy-desc">Our privacy policy content goes here...</p>
-        </div>
+    </section>
 
-        <div class="card" id="terms" data-aos="fade-up">
-            <h2 id="terms-title">Terms & Conditions</h2>
-            <p id="terms-desc">Our terms and conditions content goes here...</p>
+    <!-- Safety -->
+    <section id="safety">
+        <div class="container">
+            <h2 class="section-title">Safety first</h2>
+            <p class="section-sub">Verified profiles, trip sharing, SOS, and community ratings.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon">✅</div>
+                    <h3>KYC & verification</h3>
+                    <p>Profile checks for drivers and riders to keep the network trusted.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🆘</div>
+                    <h3>SOS & sharing</h3>
+                    <p>Share live trip with trusted contacts and access SOS when needed.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">⭐</div>
+                    <h3>Ratings & reviews</h3>
+                    <p>Two‑way feedback keeps quality high and experiences transparent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <details class="faq">
+                <summary>Is Tripzey for both people and goods?</summary>
+                <p>Yes. Tripzey supports passenger pooling and private/cargo hire across vehicle types.</p>
+            </details>
+            <details class="faq">
+                <summary>How are prices decided?</summary>
+                <p>For pooling, fares are suggested based on distance and demand. For private/cargo, vehicle owners will provide the offer.</p>
+            </details>
+            <details class="faq">
+                <summary>Do I need to pay in the app?</summary>
+                <p>You can pay in cash or digitally where supported. Digital options vary by region.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-sub">Questions or partnerships? We’re here to help.</p>
+            <div class="card">
+                <p>Email: <a href="mailto:support@tripzey.starmobilebsl.in">tripzey@starmobilebsl.in</a></p>
+<!--                <p>Domain: <a href="https://tripzey.starmobilebsl.in/">tripzey.starmobilebsl.in</a></p>-->
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container foot">
+        <div>© 2025 Tripzey. All rights reserved.</div>
+        <div class="policy">
+            <a href="#privacy" onclick="window.privacy()">Privacy</a>
+            <a href="#terms" onclick="window.terms()">Terms</a>
         </div>
     </div>
-</div>
-<footer>
-    <p id="footer-main">© 2025 Star Mobile : Multi Brand Showroom | All rights reserved</p>
 </footer>
-<script src="css/aos.js"></script>
-<script src="css/lottee.min.js"></script>
-<script>AOS.init();</script>
+
 <script>
-    lottie.loadAnimation({
-        container: document.getElementById('lottie-phone'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: 'animations/phone.json'
-    });
+    // Simple placeholder Privacy/Terms modals
+    window.privacy = () => alert('Privacy Policy: We collect minimal data to enable matching, safety, and support. Details will appear here.');
+    window.terms = () => alert('Terms: Using Tripzey means you agree to follow local laws and our platform guidelines. Details will appear here.');
+</script>
 
-    // Language translations
-    const translations = {
-        en: {
-            titleMain: "Star Mobile",
-            subtitleMain: "Multi Brand Showroom",
-            taglineMain: "Your Trusted Tech Destination",
-            navAbout: "About",
-            navServices: "Products",
-            navApps: "Tripzey",
-            navContact: "Contact",
-            navPrivacy: "Privacy",
-            navTerms: "Terms",
-            privacyTitle: "Privacy Policy",
-            privacyDesc: "At Star Mobile, we respect your privacy. We only collect essential information to provide better services and never share your data with third parties without your consent.",
-            termsTitle: "Terms & Conditions",
-            termsDesc: "By using our services, you agree to follow our policies. Product availability, pricing, and offers are subject to change. Please contact us for clarification.",
-            heroTitle: "Now Launching Digital Experiences",
-            aboutTitle: "About Us",
-            aboutDesc: "Star Mobile is a leading showroom, offering smartphones, accessories, and now expanding into mobile app development. We’re also entering the electronics market, providing a range of products like ACs, refrigerators, TVs, and home essentials. We focus on quality, trust, and modern solutions to empower your digital and daily lifestyle.",
-            servicesTitle: "What We Offer",
-            servicesList: [
-                "🔸 Multi-brand smartphones – Samsung, Apple, Oppo, Vivo & more",
-                "🔸 Mobile accessories – Earbuds, chargers, covers, screen guards",
-                "🔸 Home electronics – ACs, refrigerators, LED TVs, washing machines",
-                "🔸 Phone repair, OS upgrade, and battery replacement",
-                "🔸 EMI options & exchange offers available",
-                "🔸 Bulk/corporate device & equipment purchase"
-            ],
-            appsTitle: "🚗 Tripzey — Carpooling & Ride Sharing",
-            appsDesc: "Tripzey digitizes India's everyday ride culture: request a ride if you don't have a vehicle, offer rides with spare seats, or list your car for full hire. Negotiate fares in-app, match with nearby drivers or riders in real time, and travel safely with ratings, KYC, and SOS support.",
-            appsBtn: "Learn More",
-            contactTitle: "Contact",
-            ownerLabel: "Owner:",
-            ownerName: "Mazhar Quraishi",
-            addressLabel: "Address:",
-            addressMain: "Raza Tower, Khadka Road, Bhusawal, Jalgaon, Maharashtra, 425201",
-            emailLabel: "Email:",
-            emailMain: "support@starmobilebsl.com",
-            phoneLabel: "Phone:",
-            phoneMain: "+91-8087450009",
-            instaLabel: "Instagram:",
-            instaMain: "@star_mobile_bsl",
-            timingLabel: "Timing:",
-            timingMain: "Everyday, 10:00 AM – 10:00 PM",
-            footerMain: "© 2025 Star Mobile : Multi Brand Showroom | All rights reserved",
-            langToggle: "हिंदी"
-        },
-        hi: {
-            titleMain: "स्टार मोबाइल",
-            subtitleMain: "मल्टी ब्रांड शोरूम",
-            taglineMain: "आपका विश्वसनीय टेक डेस्टिनेशन",
-            navAbout: "परिचय",
-            navServices: "उत्पाद",
-            navApps: "ट्रिपज़ी",
-            navContact: "संपर्क करें",
-            heroTitle: "अब लॉन्च हो रहे हैं डिजिटल अनुभव",
-            aboutTitle: "हमारे बारे में",
-            aboutDesc: "स्टार मोबाइल एक अग्रणी शोरूम है, जो स्मार्टफोन, एक्सेसरीज़ और अब मोबाइल ऐप डेवलपमेंट में विस्तार कर रहा है। हम इलेक्ट्रॉनिक्स मार्केट में भी प्रवेश कर रहे हैं, जिसमें एसी, रेफ्रिजरेटर, टीवी और घरेलू आवश्यकताएँ शामिल हैं। हम गुणवत्ता, विश्वास और आधुनिक समाधान पर केंद्रित हैं ताकि आपकी डिजिटल और दैनिक जीवनशैली को सशक्त बनाया जा सके।",
-            servicesTitle: "हम क्या प्रदान करते हैं",
-            servicesList: [
-                "🔸 मल्टी-ब्रांड स्मार्टफोन – सैमसंग, एप्पल, ओप्पो, वीवो और अन्य",
-                "🔸 मोबाइल एक्सेसरीज़ – ईयरबड्स, चार्जर, कवर, स्क्रीन गार्ड",
-                "🔸 घरेलू इलेक्ट्रॉनिक्स – एसी, रेफ्रिजरेटर, एलईडी टीवी, वॉशिंग मशीन",
-                "🔸 फोन रिपेयर, ओएस अपग्रेड, और बैटरी बदलना",
-                "🔸 ईएमआई विकल्प और एक्सचेंज ऑफर उपलब्ध",
-                "🔸 बल्क/कॉर्पोरेट डिवाइस और उपकरण खरीद"
-            ],
-            appsTitle: "🚗 ट्रिपज़ी — कार पूलिंग और राइड शेयरिंग",
-            appsDesc: "ट्रिपज़ी भारत की रोज़मर्रा की राइड संस्कृति को डिजिटल बनाता है: वाहन न होने पर राइड रिक्वेस्ट करें, खाली सीटों के साथ राइड ऑफर करें, या अपने वाहन को फुल-हायर के लिए सूचीबद्ध करें। ऐप में ही किराया तय करें, पास के ड्राइवर/राइडर्स से रियल-टाइम मैच पाएँ, और रेटिंग, KYC व SOS के साथ सुरक्षित यात्रा करें।",
-            appsBtn: "और जानें",
-            contactTitle: "संपर्क करें",
-            ownerLabel: "मालिक:",
-            ownerName: "मज़हर कुरैशी",
-            addressLabel: "पता:",
-            addressMain: "रज़ा टॉवर, खड़का रोड, भुसावल, जलगांव, महाराष्ट्र, 425201",
-            emailLabel: "ईमेल:",
-            emailMain: "support@starmobilebsl.com",
-            phoneLabel: "फोन:",
-            phoneMain: "+91-8087450009",
-            instaLabel: "इंस्टाग्राम:",
-            instaMain: "@star_mobile_bsl",
-            timingLabel: "समय:",
-            timingMain: "हर दिन, सुबह 10:00 बजे – रात 10:00 बजे",
-            footerMain: "© 2025 स्टार मोबाइल : मल्टी ब्रांड शोरूम | सर्वाधिकार सुरक्षित",
-            langToggle: "English",
-            navPrivacy: "गोपनीयता",
-            navTerms: "नियम",
-            privacyTitle: "गोपनीयता नीति",
-            privacyDesc: "स्टार मोबाइल में, हम आपकी गोपनीयता का सम्मान करते हैं। हम केवल आवश्यक जानकारी एकत्र करते हैं ताकि बेहतर सेवाएँ प्रदान की जा सकें और आपकी अनुमति के बिना आपका डेटा किसी तीसरे पक्ष के साथ साझा नहीं किया जाता।",
-            termsTitle: "नियम और शर्तें",
-            termsDesc: "हमारी सेवाओं का उपयोग करके, आप हमारी नीतियों का पालन करने के लिए सहमत होते हैं। उत्पाद की उपलब्धता, मूल्य और ऑफ़र बदल सकते हैं। कृपया अधिक जानकारी के लिए हमसे संपर्क करें।"
-
-        }
-    };
-
-    function setLanguage(lang) {
-        const t = translations[lang];
-        document.getElementById('title-main').textContent = t.titleMain;
-        document.getElementById('subtitle-main').textContent = t.subtitleMain;
-        document.getElementById('tagline-main').textContent = t.taglineMain;
-        document.getElementById('nav-about').textContent = t.navAbout;
-        document.getElementById('nav-services').textContent = t.navServices;
-        document.getElementById('nav-apps').textContent = t.navApps;
-        document.getElementById('nav-contact').textContent = t.navContact;
-        document.getElementById('hero-title').textContent = t.heroTitle;
-        document.getElementById('about-title').textContent = t.aboutTitle;
-        document.getElementById('about-desc').textContent = t.aboutDesc;
-        document.getElementById('services-title').textContent = t.servicesTitle;
-        const ul = document.getElementById('services-list');
-        ul.innerHTML = '';
-        t.servicesList.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            ul.appendChild(li);
-        });
-        document.getElementById('apps-title').textContent = t.appsTitle;
-        document.getElementById('apps-desc').textContent = t.appsDesc;
-        document.getElementById('apps-btn').textContent = t.appsBtn;
-        document.getElementById('contact-title').textContent = t.contactTitle;
-        document.getElementById('owner-label').textContent = t.ownerLabel;
-        document.getElementById('owner-name').textContent = t.ownerName;
-        document.getElementById('address-label').textContent = t.addressLabel;
-        document.getElementById('address-main').textContent = t.addressMain;
-        document.getElementById('email-label').textContent = t.emailLabel;
-        document.getElementById('email-main').textContent = t.emailMain;
-        document.getElementById('phone-label').textContent = t.phoneLabel;
-        document.getElementById('phone-main').textContent = t.phoneMain;
-        document.getElementById('insta-label').textContent = t.instaLabel;
-        document.getElementById('insta-main').textContent = t.instaMain;
-        document.getElementById('timing-label').textContent = t.timingLabel;
-        document.getElementById('timing-main').textContent = t.timingMain;
-        document.getElementById('footer-main').textContent = t.footerMain;
-        document.getElementById('lang-toggle').textContent = t.langToggle;
-        localStorage.setItem('lang', lang);
-        document.getElementById('nav-privacy').textContent = t.navPrivacy;
-        document.getElementById('nav-terms').textContent = t.navTerms;
-        document.getElementById('privacy-title').textContent = t.privacyTitle;
-        document.getElementById('privacy-desc').textContent = t.privacyDesc;
-        document.getElementById('terms-title').textContent = t.termsTitle;
-        document.getElementById('terms-desc').textContent = t.termsDesc;
-        // reflect language on <html> for accessibility and SEO
-        document.documentElement.lang = lang;
+<!-- JSON-LD for SEO (update IDs and publisher as needed) -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Tripzey",
+        "operatingSystem": "ANDROID, IOS",
+        "applicationCategory": "TravelApplication",
+        "description": "Pool rides or hire privately for passenger and cargo vehicles.",
+        "url": "https://tripzey.starmobilebsl.in/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
     }
-
-    document.getElementById('lang-toggle').addEventListener('click', function () {
-        const currentLang = localStorage.getItem('lang') || 'en';
-        setLanguage(currentLang === 'en' ? 'hi' : 'en');
-    });
-
-    // On page load, set language from localStorage or default to English
-    window.addEventListener('DOMContentLoaded', function () {
-        const saved = localStorage.getItem('lang');
-        const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-        const initial = saved || (browserLang.startsWith('hi') ? 'hi' : 'en');
-        setLanguage(initial);
-    });
 </script>
 </body>
 </html>
