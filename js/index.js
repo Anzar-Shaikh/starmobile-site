@@ -1,139 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Tripzey — Pool rides & private hire for passenger and cargo</title>
-    <meta name="description" content="Tripzey lets you pool rides or offer private rides across all vehicle types — from passenger cars and bikes to cargo vans and trucks. Safe, fast, and flexible travel." />
-    <link rel="canonical" href="https://tripzey.starmobilebsl.in/" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%235b8cff'/><stop offset='100%' stop-color='%236ef3ff'/></linearGradient></defs><rect x='4' y='4' width='56' height='56' rx='12' fill='url(%23g)'/><text x='32' y='40' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='36' font-weight='900' fill='%230b1020'>T</text></svg>" />
-    <meta property="og:title" content="Tripzey — Pool rides & private hire" />
-    <meta property="og:description" content="All‑type vehicle pooling and private rides for passenger and cargo." />
-    <meta property="og:url" content="https://tripzey.starmobilebsl.in/" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+<meta name="description" content="Tripzey lets you pool rides or offer private rides across all vehicle types — from passenger cars and bikes to cargo vans and trucks. Safe, fast, and flexible travel." />
+<link rel="canonical" href="https://tripzey.starmobilebsl.in/" />
+<link rel="icon" type="image/png" href="images/tripzey-favicon.png" />
+<meta property="og:title" content="Tripzey — Pool rides & private hire" />
+<meta property="og:description" content="All‑type vehicle pooling and private rides for passenger and cargo." />
+<meta property="og:url" content="https://tripzey.starmobilebsl.in/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
 
-    <style>
-        :root {
-            --bg: #0b1020;
-            --card: #121836;
-            --brand: #5b8cff;
-            --brand-2: #6ef3ff;
-            --text: #eef3ff;
-            --muted: #b9c3dd;
-            --ok: #28c76f;
-            --warn: #ffb020;
-            --danger: #ff5c5c;
-        }
-        * { box-sizing: border-box; }
-        html, body { height: 100%; scroll-behavior: smooth; }
-        body {
-            margin: 0;
-            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-            color: var(--text);
-            background: radial-gradient(1200px 800px at 20% -10%, #1a2250 0%, transparent 60%),
-            radial-gradient(1000px 600px at 90% 10%, #0f1b3a 0%, transparent 60%),
-            var(--bg);
-        }
-        a { color: inherit; text-decoration: none; }
-        .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+<style>
+    :root {
+    --bg: #0b1020;
+    --card: #121836;
+    --brand: #5b8cff;
+    --brand-2: #6ef3ff;
+    --text: #eef3ff;
+    --muted: #b9c3dd;
+    --ok: #28c76f;
+    --warn: #ffb020;
+    --danger: #ff5c5c;
+}
+    * { box-sizing: border-box; }
+    html, body { height: 100%; scroll-behavior: smooth; }
+    body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    color: var(--text);
+    background: radial-gradient(1200px 800px at 20% -10%, #1a2250 0%, transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, #0f1b3a 0%, transparent 60%),
+    var(--bg);
+}
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
 
-        /* Header */
-        header {
-            position: sticky; top: 0; z-index: 20;
-            background: rgba(11,16,32,0.7); backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .nav {
-            display: flex; align-items: center; justify-content: space-between; height: 64px;
-        }
-        .brand {
-            display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.2px;
-        }
-        .brand-badge {
-            width: 32px; height: 32px; border-radius: 10px;
-            background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
-            display: grid; place-items: center; color: #0b1020; font-weight: 900;
-        }
-        nav ul { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }
-        nav a { color: var(--muted); font-weight: 600; }
-        nav a:hover { color: var(--text); }
+    /* Header */
+    header {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(11,16,32,0.7); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+    .nav {
+    display: flex; align-items: center; justify-content: space-between; height: 64px;
+}
+    .brand {
+    display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.2px;
+}
+    .brand-badge {
+    width: 32px; height: 32px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+    display: grid; place-items: center; color: #0b1020; font-weight: 900;
+}
+    nav ul { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }
+    nav a { color: var(--muted); font-weight: 600; }
+    nav a:hover { color: var(--text); }
 
-        /* Hero */
-        .hero { padding: 72px 0 32px; }
-        .hero-inner {
-            display: grid; gap: 28px; align-items: center;
-            grid-template-columns: 1.1fr 0.9fr;
-        }
-        .title { font-size: clamp(32px, 4vw, 52px); line-height: 1.05; margin: 0 0 10px; }
-        .subtitle { color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin: 0 0 22px; }
-        .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0 26px; }
-        .btn {
-            padding: 12px 18px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);
-            background: #192140; color: var(--text); font-weight: 700;
-        }
-        .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; border: none; }
-        .btn.ghost { background: transparent; }
-        .stores { display: flex; gap: 12px; flex-wrap: wrap; }
-        .store-btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            padding: 12px 16px; border-radius: 12px; background: #0e1430;
-            border: 1px solid rgba(255,255,255,0.08); color: var(--text); font-weight: 700;
-        }
-        .store-btn small { display: block; color: var(--muted); font-weight: 600; line-height: 1; }
-        .mock {
-            width: 100%; aspect-ratio: 3/4; border-radius: 24px; border: 1px solid rgba(255,255,255,0.06);
-            background:
-                    radial-gradient(200px 120px at 80% 0%, rgba(110,243,255,0.25), transparent 60%),
-                    radial-gradient(220px 140px at 20% 100%, rgba(91,140,255,0.25), transparent 60%),
-                    linear-gradient(180deg, #0d1533 0%, #0a112b 100%);
-            display: grid; place-items: center; color: var(--muted);
-        }
+    /* Hero */
+    .hero { padding: 72px 0 32px; }
+    .hero-inner {
+    display: grid; gap: 28px; align-items: center;
+    grid-template-columns: 1.1fr 0.9fr;
+}
+    .title { font-size: clamp(32px, 4vw, 52px); line-height: 1.05; margin: 0 0 10px; }
+    .subtitle { color: var(--muted); font-size: clamp(16px, 2vw, 18px); margin: 0 0 22px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0 26px; }
+    .btn {
+    padding: 12px 18px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);
+    background: #192140; color: var(--text); font-weight: 700;
+}
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; border: none; }
+    .btn.ghost { background: transparent; }
+    .stores { display: flex; gap: 12px; flex-wrap: wrap; }
+    .store-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 16px; border-radius: 12px; background: #0e1430;
+    border: 1px solid rgba(255,255,255,0.08); color: var(--text); font-weight: 700;
+}
+    .store-btn small { display: block; color: var(--muted); font-weight: 600; line-height: 1; }
+    .mock {
+    width: 100%; aspect-ratio: 3/4; border-radius: 24px; border: 1px solid rgba(255,255,255,0.06);
+    background:
+    radial-gradient(200px 120px at 80% 0%, rgba(110,243,255,0.25), transparent 60%),
+    radial-gradient(220px 140px at 20% 100%, rgba(91,140,255,0.25), transparent 60%),
+    linear-gradient(180deg, #0d1533 0%, #0a112b 100%);
+    display: grid; place-items: center; color: var(--muted);
+}
 
-        /* Sections */
-        section { padding: 60px 0; }
-        .section-title { font-size: 28px; margin: 0 0 12px; }
-        .section-sub { color: var(--muted); margin: 0 0 26px; }
-        .grid-3 {
-            display: grid; gap: 16px;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-        .card {
-            background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px;
-            padding: 18px;
-        }
-        .card h3 { margin: 0 0 8px; font-size: 18px; }
-        .card p { margin: 0; color: var(--muted); }
-        .icon { font-size: 22px; }
+    /* Sections */
+    section { padding: 60px 0; }
+    .section-title { font-size: 28px; margin: 0 0 12px; }
+    .section-sub { color: var(--muted); margin: 0 0 26px; }
+    .grid-3 {
+    display: grid; gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+    .card {
+    background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px;
+    padding: 18px;
+}
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+    .icon { font-size: 22px; }
 
-        .steps {
-            display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-        .step { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 16px; }
-        .step .num {
-            display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px;
-            background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; font-weight: 800;
-            margin-bottom: 10px;
-        }
+    .steps {
+    display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+    .step { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 16px; }
+    .step .num {
+    display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; font-weight: 800;
+    margin-bottom: 10px;
+}
 
-        details.faq { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 14px 16px; }
-        details.faq + details.faq { margin-top: 10px; }
-        details.faq summary { cursor: pointer; font-weight: 700; }
-        details.faq p { color: var(--muted); }
+    details.faq { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 14px 16px; }
+    details.faq + details.faq { margin-top: 10px; }
+    details.faq summary { cursor: pointer; font-weight: 700; }
+    details.faq p { color: var(--muted); }
 
-        /* Footer */
-        footer { padding: 28px 0 50px; color: var(--muted); }
-        .foot { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
-        .foot a { color: var(--muted); }
-        .policy { display: flex; gap: 14px; flex-wrap: wrap; }
+    /* Footer */
+    footer { padding: 28px 0 50px; color: var(--muted); }
+    .foot { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+    .foot a { color: var(--muted); }
+    .policy { display: flex; gap: 14px; flex-wrap: wrap; }
 
-        /* Responsive */
-        @media (max-width: 900px) {
-            .hero-inner { grid-template-columns: 1fr; }
-            .grid-3 { grid-template-columns: 1fr; }
-            .steps { grid-template-columns: 1fr 1fr; }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+}
+</style>
 </head>
 <body>
 <header>
@@ -177,7 +177,7 @@
             <div class="mock" aria-label="Tripzey app preview">
                 <div>
                     <div style="text-align:center; font-weight:700; margin-bottom:8px;">Live trip map • Requests • Offers</div>
-                    <div style="font-size:44px; color:var(--muted); text-align:center;">Cargo rides are coming soon</div>
+                    <div style="font-size:14px; color:var(--muted); text-align:center;">Screenshots coming soon</div>
                 </div>
             </div>
         </div>
@@ -207,12 +207,12 @@
                 <div class="card">
                     <div class="icon">📍</div>
                     <h3>Real‑time matching</h3>
-                    <p>See nearby drivers and riders, and dynamic availability.</p>
+                    <p>See nearby drivers and riders, live ETA updates, and dynamic availability.</p>
                 </div>
                 <div class="card">
                     <div class="icon">💬</div>
-                    <h3>Seamless communication</h3>
-                    <p>Coordinate safely with your passengers or drivers.</p>
+                    <h3>In‑app chat & calls</h3>
+                    <p>Coordinate safely with masked calls and secure chat.</p>
                 </div>
                 <div class="card">
                     <div class="icon">💳</div>
@@ -241,7 +241,7 @@
                 <div class="step">
                     <div class="num">3</div>
                     <h3>Match & chat</h3>
-                    <p>Get real‑time matches, chat on whatsapp, confirm fares.</p>
+                    <p>Get real‑time matches, chat in‑app, confirm fares.</p>
                 </div>
                 <div class="step">
                     <div class="num">4</div>
@@ -287,7 +287,7 @@
             </details>
             <details class="faq">
                 <summary>How are prices decided?</summary>
-                <p>For pooling, fares are suggested based on distance and demand. For private/cargo, vehicle owners will provide the offer.</p>
+                <p>For pooling, fares are suggested based on distance and demand. For private/cargo, upfront quotes are shown or negotiated in‑app.</p>
             </details>
             <details class="faq">
                 <summary>Do I need to pay in the app?</summary>
@@ -302,8 +302,8 @@
             <h2 class="section-title">Contact</h2>
             <p class="section-sub">Questions or partnerships? We’re here to help.</p>
             <div class="card">
-                <!-- Fix email text to match href -->
-                <p>Email: <a href="mailto:support@tripzey.starmobilebsl.in">tripzey@starmobilebsl.in</a></p>
+                <p>Email: <a href="mailto:support@tripzey.starmobilebsl.in">support@tripzey.starmobilebsl.in</a></p>
+                <p>Domain: <a href="https://tripzey.starmobilebsl.in/">tripzey.starmobilebsl.in</a></p>
             </div>
         </div>
     </section>
@@ -313,12 +313,17 @@
     <div class="container foot">
         <div>© 2025 Tripzey. All rights reserved.</div>
         <div class="policy">
-            <!-- Link to real policy pages -->
-            <a href="/privacy.html">Privacy</a>
-            <a href="/terms.html">Terms</a>
+            <a href="#privacy" onclick="window.privacy()">Privacy</a>
+            <a href="#terms" onclick="window.terms()">Terms</a>
         </div>
     </div>
 </footer>
+
+<script>
+    // Simple placeholder Privacy/Terms modals
+    window.privacy = () => alert('Privacy Policy: We collect minimal data to enable matching, safety, and support. Details will appear here.');
+    window.terms = () => alert('Terms: Using Tripzey means you agree to follow local laws and our platform guidelines. Details will appear here.');
+</script>
 
 <!-- JSON-LD for SEO (update IDs and publisher as needed) -->
 <script type="application/ld+json">
