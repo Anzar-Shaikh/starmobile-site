@@ -121,15 +121,15 @@
         details.faq summary { cursor: pointer; font-weight: 700; }
         details.faq p { color: var(--muted); }
 
-        /* Footer */
-        footer { padding: 28px 0 50px; color: var(--muted); }
-        .foot { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
-        .foot a { color: var(--muted); }
-        .policy { display: flex; gap: 14px; flex-wrap: wrap; }
+        /* Download section */
+        .os-cards { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .os-card { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px; border-radius: 16px; background: var(--card); border: 1px solid rgba(255,255,255,0.06); }
+        .os-card h3 { margin: 0; font-size: 20px; }
+        .os-card p { margin: 4px 0 0; color: var(--muted); }
+        .os-card .actions { display: flex; gap: 10px; }
+        .tag { display: inline-block; font-size: 12px; color: #0b1020; background: linear-gradient(135deg, var(--brand), var(--brand-2)); padding: 4px 8px; border-radius: 999px; font-weight: 800; }
+        .btn.disabled { opacity: 0.5; pointer-events: none; }
 
-        /* Responsive */
-        @media (max-width: 900px) {
-            .hero-inner { grid-template-columns: 1fr; }
             .grid-3 { grid-template-columns: 1fr; }
             .steps { grid-template-columns: 1fr 1fr; }
         }
@@ -154,7 +154,7 @@
     </div>
 </header>
 
-<main>
+                <li><a href="#download">Download</a></li>
     <!-- Hero -->
     <section class="hero">
         <div class="container hero-inner">
@@ -166,7 +166,7 @@
                     <a class="btn ghost" href="#how">How it works</a>
                 </div>
                 <div class="stores">
-                    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.tripzey" rel="noopener">
+                    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.pool_in_ui&hl=en" rel="noopener">
                         <span>Google Play<br/><small>Get it on</small></span>
                     </a>
                     <a class="store-btn" href="https://apps.apple.com/app/id000000000" rel="noopener">
@@ -176,8 +176,11 @@
             </div>
             <div class="mock" aria-label="Tripzey app preview">
                 <div>
-                    <div style="text-align:center; font-weight:700; margin-bottom:8px;">Live trip map • Requests • Offers</div>
-                    <div style="font-size:44px; color:var(--muted); text-align:center;">Cargo rides are coming soon</div>
+                    <div style="text-align:center; font-weight:700; margin-bottom:8px;">
+                        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.pool_in_ui&hl=en" rel="noopener">
+                        Live trip map • Requests • Offers
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,30 +197,48 @@
                     <h3>Pool passenger rides</h3>
                     <p>Request a seat or offer your spare seats for daily commutes and inter‑city trips.</p>
                 </div>
-                <div class="card">
-                    <div class="icon">🛻</div>
-                    <h3>Hire cargo vehicles</h3>
-                    <p>Post a cargo job and match with nearby vans, pickups, or trucks in minutes.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🛻</div>
+                <h3>Hire cargo vehicles</h3>
+                <p>Post a cargo job and match with nearby vans, pickups, or trucks in minutes.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🔒</div>
+                <h3>Private full‑vehicle hire</h3>
+                <p>Book the entire vehicle for yourself or your business with upfront pricing.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📍</div>
+                <h3>Real‑time matching</h3>
+                <p>See nearby drivers and riders, and dynamic availability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New: Download section for OS selection -->
+    <section id="download">
+        <div class="container">
+            <h2 class="section-title">Get Tripzey</h2>
+            <p class="section-sub">Choose your device to continue to the store.</p>
+            <div class="os-cards">
+                <div class="os-card">
+                    <div>
+                        <h3>Android</h3>
+                        <p>Install from Google Play</p>
+                    </div>
+                    <div class="actions">
+                        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.pool_in_ui&hl=en" rel="noopener">Open Play Store</a>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="icon">🔒</div>
-                    <h3>Private full‑vehicle hire</h3>
-                    <p>Book the entire vehicle for yourself or your business with upfront pricing.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">📍</div>
-                    <h3>Real‑time matching</h3>
-                    <p>See nearby drivers and riders, and dynamic availability.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">💬</div>
-                    <h3>Seamless communication</h3>
-                    <p>Coordinate safely with your passengers or drivers.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">💳</div>
-                    <h3>Cash or digital</h3>
-                    <p>Pay the way you like — cash, UPI, or cards where supported.</p>
+                <div class="os-card">
+                    <div>
+                        <h3>iPhone</h3>
+                        <p>App Store link coming soon</p>
+                    </div>
+                    <div class="actions">
+                        <a class="btn disabled" aria-disabled="true" href="#">Coming soon</a>
+                    </div>
                 </div>
             </div>
         </div>
